@@ -164,29 +164,4 @@ class ace extends plxPlugin {
 		}
 	}
 }
-
-
-
-
-
-/* Pense-bête:
- * Récuperer des parametres du fichier parameters.xml
- *	$plxPlugin->getParam("<nom du parametre>")
- *	$plxPlugin-> setParam ("param1", 12345, "numeric")
- *	$plxPlugin->saveParams()
- *
- *	plxUtils::strCheck($string) : sanitize string
- *
- * 
- * Quelques constantes utiles: 
- * PLX_CORE
- * PLX_ROOT
- * PLX_CHARSET
- * PLX_CONFIG_PATH
- * PLX_PLUGINS
- *
- * Appel de HOOK
- *	eval($plxShow->callHook("ThemeEndHead","param1"))  ou eval($plxShow->callHook("ThemeEndHead",array("param1","param2")))
- *	ou $retour=$plxShow->callHook("ThemeEndHead","param1"));
- */
 ?>
