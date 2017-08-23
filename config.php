@@ -4,12 +4,12 @@ $aThemes = array("chrome"=>"Chrome","clouds"=>"Clouds","crimson_editor"=>"Crimso
 	if(!empty($_POST)) {
 		$plxPlugin->setParam("theme", $_POST["theme"], "string");
 		$plxPlugin->setParam("fontsize", $_POST["fontsize"], "numeric");
-		$plxPlugin->setParam("statiques", ($_POST["statiques"]=='on' ? 1 : 0), "numeric");
-		$plxPlugin->setParam("articles", ($_POST["articles"]=='on'? 1:0), "numeric");
-		$plxPlugin->setParam("categories", ($_POST["categories"]=='on'? 1:0), "numeric");
-		$plxPlugin->setParam("commentaires", ($_POST["commentaires"]=='on'? 1:0), "numeric");
-		$plxPlugin->setParam("settings", ($_POST["settings"]=='on'? 1:0), "numeric");
-		$plxPlugin->setParam("css", ($_POST["css"]=='on'? 1:0), "numeric");
+		$plxPlugin->setParam("statiques", (isset($_POST["statiques"]) || $_POST["statiques"]=='on' ? 1 : 0), "numeric");
+		$plxPlugin->setParam("articles", (isset($_POST["articles"]) || $_POST["articles"]=='on'? 1:0), "numeric");
+		$plxPlugin->setParam("categories", (isset($_POST["categories"]) || $_POST["categories"]=='on'? 1:0), "numeric");
+		$plxPlugin->setParam("commentaires", (isset($_POST["commentaires"]) || $_POST["commentaires"]=='on'? 1:0), "numeric");
+		$plxPlugin->setParam("settings", (isset($_POST["settings"]) || $_POST["settings"]=='on'? 1:0), "numeric");
+		$plxPlugin->setParam("css", (isset($_POST["css"]) || $_POST["css"]=='on'? 1:0), "numeric");
 		$plxPlugin->saveParams();
 		header("Location: parametres_plugin.php?p=ace");
 		exit;
