@@ -1,4 +1,3 @@
-
 <?php 
 $LANG = array(
         "L_TITLE"                => "ace",
